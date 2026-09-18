@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>5 Things You Need Before GTA VI Launches — PRELOAD 6</title>
+<meta name="description" content="A short, no-fluff checklist of what to sort out before Grand Theft Auto VI launches on November 19, 2026.">
+<style>
+/* ===========================================================
+   PRELOAD — design tokens
+   Palette grounded in a Miami/Vice night: deep indigo sky,
+   sunset gold, and the pink/teal duotone of the coastline at dusk.
+   =========================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600;700;800&family=Manrope:wght@400;500;600;700&display=swap');
+
+:root {
+  --bg: #0E1225;
+  --bg-panel: #171B32;
+  --bg-panel-alt: #1D2242;
+  --text: #F5F3ED;
+  --text-muted: #9AA0B4;
+  --pink: #FF3E7F;
+  --teal: #2DE2C5;
+  --gold: #FFB238;
+  --border: rgba(245, 243, 237, 0.09);
+  --border-strong: rgba(245, 243, 237, 0.16);
+  --radius: 14px;
+  --max: 1120px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  background-image:
+    radial-gradient(ellipse 900px 500px at 15% -10%, rgba(255, 62, 127, 0.16), transparent 60%),
+    radial-gradient(ellipse 800px 500px at 100% 0%, rgba(45, 226, 197, 0.12), transparent 55%);
+  color: var(--text);
+  font-family: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, .display {
+  font-family: 'Unbounded', 'Manrope', sans-serif;
+  line-height: 1.12;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+h1 { font-weight: 700; }
+h2 { font-weight: 600; }
+h3 { font-weight: 600; }
+
+a { color: inherit; }
+
+p { color: var(--text-muted); max-width: 62ch; }
+
+.wrap {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* -------- header -------- */
+header.site {
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  background: rgba(14, 18, 37, 0.85);
+  backdrop-filter: blur(10px);
+  z-index: 10;
+}
+
+header.site .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+}
+
+.logo {
+  font-family: 'Unbounded', sans-serif;
+  font-weight: 700;
+  font-size: 1.15rem;
+  text-decoration: none;
+  color: var(--text);
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+.logo .dot { color: var(--pink); }
+
+nav.primary { display: flex; gap: 28px; }
+nav.primary a {
+  text-decoration: none;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.15s ease;
+}
+nav.primary a:hover, nav.primary a:focus-visible { color: var(--text); }
+
+/* -------- buttons -------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 22px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border: 1px solid transparent;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.btn:focus-visible { outline: 2px solid var(--teal); outline-offset: 2px; }
+.btn-primary {
+  background: linear-gradient(135deg, var(--pink), #ff6f9c);
+  color: #14071A;
+}
+.btn-primary:hover { transform: translateY(-1px); box-shadow: 0 8px 24px -8px rgba(255, 62, 127, 0.55); }
+.btn-ghost {
+  background: transparent;
+  border-color: var(--border-strong);
+  color: var(--text);
+}
+.btn-ghost:hover { border-color: var(--teal); color: var(--teal); }
+
+/* -------- hero -------- */
+.hero {
+  padding: 88px 0 64px;
+  border-bottom: 1px solid var(--border);
+}
+.hero .kicker {
+  color: var(--teal);
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 18px;
+}
+.hero h1 {
+  font-size: clamp(2.4rem, 5.5vw, 4.1rem);
+  max-width: 15ch;
+}
+.hero .lede {
+  margin-top: 22px;
+  font-size: 1.15rem;
+  max-width: 52ch;
+  color: var(--text-muted);
+}
+.hero .actions { margin-top: 34px; display: flex; gap: 14px; flex-wrap: wrap; }
+
+.countdown {
+  margin-top: 46px;
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+.countdown .unit {
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px 20px;
+  min-width: 84px;
+  text-align: center;
+}
+.countdown .num {
+  font-family: 'Unbounded', sans-serif;
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: var(--gold);
+}
+.countdown .label {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  text-transform: lowercase;
+  margin-top: 2px;
+}
+
+/* -------- sections -------- */
+section { padding: 72px 0; }
+section.tinted { background: var(--bg-panel); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+
+.section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 24px;
+  margin-bottom: 36px;
+  flex-wrap: wrap;
+}
+.section-head h2 { font-size: clamp(1.5rem, 3vw, 2.1rem); }
+.section-head a { color: var(--teal); text-decoration: none; font-weight: 600; font-size: 0.9rem; white-space: nowrap; }
+
+/* -------- card grid -------- */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+@media (max-width: 880px) { .grid { grid-template-columns: 1fr; } }
+
+.card {
+  background: var(--bg-panel-alt);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 26px;
+  text-decoration: none;
+  display: block;
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+.card:hover { border-color: var(--border-strong); transform: translateY(-2px); }
+.card .tag {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--pink);
+  margin-bottom: 12px;
+}
+.card h3 { font-size: 1.15rem; color: var(--text); margin-bottom: 10px; }
+.card p { font-size: 0.92rem; margin: 0; }
+
+/* -------- news list -------- */
+.news-row {
+  display: flex;
+  gap: 20px;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--border);
+  align-items: baseline;
+}
+.news-row:last-child { border-bottom: none; }
+.news-row .date { color: var(--text-muted); font-size: 0.85rem; min-width: 90px; }
+.news-row a { text-decoration: none; font-weight: 600; }
+.news-row a:hover { color: var(--teal); }
+
+/* -------- footer -------- */
+footer.site {
+  border-top: 1px solid var(--border);
+  padding: 48px 0 64px;
+}
+footer.site .cols {
+  display: flex;
+  justify-content: space-between;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+footer.site .disclosure {
+  max-width: 60ch;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+footer.site nav { display: flex; gap: 22px; flex-wrap: wrap; }
+footer.site nav a { text-decoration: none; color: var(--text-muted); font-size: 0.9rem; }
+footer.site nav a:hover { color: var(--text); }
+footer.site .copy { margin-top: 28px; color: var(--text-muted); font-size: 0.8rem; }
+
+/* -------- article -------- */
+.article-head { padding: 64px 0 40px; border-bottom: 1px solid var(--border); }
+.article-head .kicker { color: var(--teal); font-weight: 600; margin-bottom: 16px; }
+.article-head h1 { font-size: clamp(2rem, 4.5vw, 3rem); max-width: 20ch; }
+.article-head .meta { margin-top: 20px; color: var(--text-muted); font-size: 0.9rem; }
+
+.article-body { padding: 48px 0; max-width: 72ch; }
+.article-body h2 { font-size: 1.5rem; margin-top: 44px; margin-bottom: 16px; color: var(--text); }
+.article-body h3 { font-size: 1.15rem; margin-top: 30px; margin-bottom: 10px; color: var(--text); }
+.article-body p { color: var(--text-muted); margin: 0 0 16px; }
+.article-body ul, .article-body ol { color: var(--text-muted); padding-left: 22px; }
+.article-body li { margin-bottom: 8px; }
+.article-body strong { color: var(--text); }
+
+.disclosure-box {
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--gold);
+  border-radius: 10px;
+  padding: 18px 22px;
+  margin: 28px 0 40px;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.pick-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 24px 0 36px;
+  font-size: 0.92rem;
+}
+.pick-table th, .pick-table td {
+  text-align: left;
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--border);
+}
+.pick-table th { color: var(--text-muted); font-weight: 600; font-size: 0.82rem; }
+.pick-table td { color: var(--text); }
+.pick-table .buy {
+  display: inline-block;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--gold);
+  text-decoration: none;
+}
+
+@media (max-width: 640px) {
+  .hero { padding: 56px 0 40px; }
+  section { padding: 48px 0; }
+}
+
+
+/* -------- signup -------- */
+.signup-box {
+  margin-top: 28px;
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--gold);
+  border-radius: var(--radius);
+  padding: 28px 30px;
+  max-width: 560px;
+}
+.signup-copy h3 { font-size: 1.15rem; margin-bottom: 8px; }
+.signup-copy p { font-size: 0.92rem; margin: 0 0 18px; }
+.ml-embedded input[type="email"] {
+  background: var(--bg-panel-alt) !important;
+  border: 1px solid var(--border-strong) !important;
+  color: var(--text) !important;
+  border-radius: 10px !important;
+}
+.ml-embedded button, .ml-embedded input[type="submit"] {
+  background: linear-gradient(135deg, var(--pink), #ff6f9c) !important;
+  color: #14071A !important;
+  border-radius: 999px !important;
+  font-weight: 600 !important;
+  border: none !important;
+}
+
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <a class="logo" href="../index.html">PRELOAD<span class="dot">6</span></a>
+    <nav class="primary">
+      <a href="ps5-vs-xbox-gta6.html">Setup Guides</a>
+      <a href="../index.html#news">News</a>
+      <a href="../index.html#deals">Deals</a>
+      <a href="../about-disclosure.html">About</a>
+    </nav>
+  </div>
+</header>
+
+<div class="article-head">
+  <div class="wrap">
+    <div class="kicker">Checklist</div>
+    <h1>5 Things You Need Before GTA VI Launches</h1>
+    <div class="meta">Updated for the November 19, 2026 launch · 4 min read</div>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="article-body">
+
+    <p>
+      This isn't a hype list. It's the small stuff people find out about
+      the hard way on launch day — usually while a 100GB+ download sits
+      at 40% and the store is closed. Sort these before November 12,
+      when preloading opens.
+    </p>
+
+    <div class="disclosure-box">
+      This guide contains affiliate links. We may earn a commission if
+      you buy through them, at no extra cost to you. Full details on our
+      <a href="../about-disclosure.html" style="color:var(--teal)">disclosure page</a>.
+    </div>
+
+    <h2>1. Enough free storage — with room to spare</h2>
+    <p>
+      Large open-world launches routinely need well over 100GB, and day-one
+      patches add more on top of the base install. Check your console's
+      free space now, not the week of launch. If you're tight, an
+      external or expansion drive is worth buying early — prices tend to
+      creep up right before major releases.
+    </p>
+
+    <h2>2. A stable, fast internet connection</h2>
+    <p>
+      Preloading a large file over a slow or congested connection during
+      launch week is its own kind of pain. If your connection has been
+      flaky, this is the month to deal with it — a wired connection
+      during the preload window will save real time over Wi-Fi.
+    </p>
+
+    <h2>3. An active subscription, if you're playing online</h2>
+    <p>
+      Online multiplayer on both PS5 and Xbox requires an active
+      PlayStation Plus or Xbox Live Gold/Game Pass subscription. Check
+      your renewal date now so it doesn't lapse mid-launch-week.
+    </p>
+
+    <h2>4. A headset that won't die on you mid-session</h2>
+    <p>
+      Open-world games run long. A headset that's uncomfortable after 90
+      minutes, or one with a battery that doesn't last a session, becomes
+      a real annoyance fast. If yours is already on its way out, replace
+      it before launch rather than during it.
+    </p>
+
+    <h2>5. Realistic expectations for launch-day servers</h2>
+    <p>
+      Major online launches strain servers, no matter how much a studio
+      prepares. Go in expecting some early friction with online features
+      specifically — the single-player campaign is unaffected by this.
+      It's not a reason to worry, just a reason not to plan your first
+      night entirely around online play.
+    </p>
+
+    <h2>What to buy now vs. wait on</h2>
+    <ul>
+      <li><strong>Buy now:</strong> storage expansion, if you're already tight.</li>
+      <li><strong>Buy now:</strong> a wired ethernet adapter if you're on Wi-Fi only.</li>
+      <li><strong>Wait:</strong> a new console, unless a genuine sale is on — pricing on consoles specifically tends to move around Black Friday, which lands right after launch.</li>
+      <li><strong>Wait:</strong> a new TV/monitor purchase — see our upcoming display guide before spending here.</li>
+    </ul>
+
+    <h2>Next step</h2>
+    <p>
+      If you haven't settled on a platform yet, start with
+      <a href="ps5-vs-xbox-gta6.html" style="color:var(--teal)">PS5 vs Xbox Series X|S for GTA VI</a>.
+    </p>
+
+    <div class="signup-box">
+      <div class="signup-copy">
+        <h3>Get deal alerts before launch</h3>
+        <p>One email when console or accessory prices actually move. No noise, no daily digest.</p>
+      </div>
+      <div class="ml-embedded" data-form="198850661890131858"></div>
+    </div>
+
+  </div>
+</div>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="cols">
+      <p class="disclosure">
+        PRELOAD 6 is an independent, unofficial buying guide and is not
+        affiliated with, endorsed by, or sponsored by Rockstar Games,
+        Take-Two Interactive, Sony, or Microsoft. Some links on this site
+        are affiliate links — see our <a href="../about-disclosure.html" style="color:var(--teal)">disclosure page</a>.
+      </p>
+      <nav>
+        <a href="ps5-vs-xbox-gta6.html">Setup Guides</a>
+        <a href="../about-disclosure.html">About</a>
+        <a href="../about-disclosure.html">Disclosure</a>
+      </nav>
+    </div>
+    <div class="copy">© 2026 PRELOAD 6. All product names and trademarks are property of their respective owners.</div>
+  </div>
+</footer>
+
+
+<script>
+    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+    ml('account', '2374933');
+</script>
+
+</body>
+</html>

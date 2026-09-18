@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PS5 vs Xbox Series X|S for GTA VI: Which Should You Buy? — PRELOAD 6</title>
+<meta name="description" content="GTA VI launches on both PS5 and Xbox Series X|S. Here's how the platforms actually differ, and which one makes sense if you're buying new.">
+<style>
+/* ===========================================================
+   PRELOAD — design tokens
+   Palette grounded in a Miami/Vice night: deep indigo sky,
+   sunset gold, and the pink/teal duotone of the coastline at dusk.
+   =========================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600;700;800&family=Manrope:wght@400;500;600;700&display=swap');
+
+:root {
+  --bg: #0E1225;
+  --bg-panel: #171B32;
+  --bg-panel-alt: #1D2242;
+  --text: #F5F3ED;
+  --text-muted: #9AA0B4;
+  --pink: #FF3E7F;
+  --teal: #2DE2C5;
+  --gold: #FFB238;
+  --border: rgba(245, 243, 237, 0.09);
+  --border-strong: rgba(245, 243, 237, 0.16);
+  --radius: 14px;
+  --max: 1120px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  background-image:
+    radial-gradient(ellipse 900px 500px at 15% -10%, rgba(255, 62, 127, 0.16), transparent 60%),
+    radial-gradient(ellipse 800px 500px at 100% 0%, rgba(45, 226, 197, 0.12), transparent 55%);
+  color: var(--text);
+  font-family: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, .display {
+  font-family: 'Unbounded', 'Manrope', sans-serif;
+  line-height: 1.12;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+h1 { font-weight: 700; }
+h2 { font-weight: 600; }
+h3 { font-weight: 600; }
+
+a { color: inherit; }
+
+p { color: var(--text-muted); max-width: 62ch; }
+
+.wrap {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* -------- header -------- */
+header.site {
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  background: rgba(14, 18, 37, 0.85);
+  backdrop-filter: blur(10px);
+  z-index: 10;
+}
+
+header.site .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+}
+
+.logo {
+  font-family: 'Unbounded', sans-serif;
+  font-weight: 700;
+  font-size: 1.15rem;
+  text-decoration: none;
+  color: var(--text);
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+.logo .dot { color: var(--pink); }
+
+nav.primary { display: flex; gap: 28px; }
+nav.primary a {
+  text-decoration: none;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.15s ease;
+}
+nav.primary a:hover, nav.primary a:focus-visible { color: var(--text); }
+
+/* -------- buttons -------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 22px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border: 1px solid transparent;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.btn:focus-visible { outline: 2px solid var(--teal); outline-offset: 2px; }
+.btn-primary {
+  background: linear-gradient(135deg, var(--pink), #ff6f9c);
+  color: #14071A;
+}
+.btn-primary:hover { transform: translateY(-1px); box-shadow: 0 8px 24px -8px rgba(255, 62, 127, 0.55); }
+.btn-ghost {
+  background: transparent;
+  border-color: var(--border-strong);
+  color: var(--text);
+}
+.btn-ghost:hover { border-color: var(--teal); color: var(--teal); }
+
+/* -------- hero -------- */
+.hero {
+  padding: 88px 0 64px;
+  border-bottom: 1px solid var(--border);
+}
+.hero .kicker {
+  color: var(--teal);
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 18px;
+}
+.hero h1 {
+  font-size: clamp(2.4rem, 5.5vw, 4.1rem);
+  max-width: 15ch;
+}
+.hero .lede {
+  margin-top: 22px;
+  font-size: 1.15rem;
+  max-width: 52ch;
+  color: var(--text-muted);
+}
+.hero .actions { margin-top: 34px; display: flex; gap: 14px; flex-wrap: wrap; }
+
+.countdown {
+  margin-top: 46px;
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+.countdown .unit {
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px 20px;
+  min-width: 84px;
+  text-align: center;
+}
+.countdown .num {
+  font-family: 'Unbounded', sans-serif;
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: var(--gold);
+}
+.countdown .label {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  text-transform: lowercase;
+  margin-top: 2px;
+}
+
+/* -------- sections -------- */
+section { padding: 72px 0; }
+section.tinted { background: var(--bg-panel); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+
+.section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 24px;
+  margin-bottom: 36px;
+  flex-wrap: wrap;
+}
+.section-head h2 { font-size: clamp(1.5rem, 3vw, 2.1rem); }
+.section-head a { color: var(--teal); text-decoration: none; font-weight: 600; font-size: 0.9rem; white-space: nowrap; }
+
+/* -------- card grid -------- */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+@media (max-width: 880px) { .grid { grid-template-columns: 1fr; } }
+
+.card {
+  background: var(--bg-panel-alt);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 26px;
+  text-decoration: none;
+  display: block;
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+.card:hover { border-color: var(--border-strong); transform: translateY(-2px); }
+.card .tag {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--pink);
+  margin-bottom: 12px;
+}
+.card h3 { font-size: 1.15rem; color: var(--text); margin-bottom: 10px; }
+.card p { font-size: 0.92rem; margin: 0; }
+
+/* -------- news list -------- */
+.news-row {
+  display: flex;
+  gap: 20px;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--border);
+  align-items: baseline;
+}
+.news-row:last-child { border-bottom: none; }
+.news-row .date { color: var(--text-muted); font-size: 0.85rem; min-width: 90px; }
+.news-row a { text-decoration: none; font-weight: 600; }
+.news-row a:hover { color: var(--teal); }
+
+/* -------- footer -------- */
+footer.site {
+  border-top: 1px solid var(--border);
+  padding: 48px 0 64px;
+}
+footer.site .cols {
+  display: flex;
+  justify-content: space-between;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+footer.site .disclosure {
+  max-width: 60ch;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+footer.site nav { display: flex; gap: 22px; flex-wrap: wrap; }
+footer.site nav a { text-decoration: none; color: var(--text-muted); font-size: 0.9rem; }
+footer.site nav a:hover { color: var(--text); }
+footer.site .copy { margin-top: 28px; color: var(--text-muted); font-size: 0.8rem; }
+
+/* -------- article -------- */
+.article-head { padding: 64px 0 40px; border-bottom: 1px solid var(--border); }
+.article-head .kicker { color: var(--teal); font-weight: 600; margin-bottom: 16px; }
+.article-head h1 { font-size: clamp(2rem, 4.5vw, 3rem); max-width: 20ch; }
+.article-head .meta { margin-top: 20px; color: var(--text-muted); font-size: 0.9rem; }
+
+.article-body { padding: 48px 0; max-width: 72ch; }
+.article-body h2 { font-size: 1.5rem; margin-top: 44px; margin-bottom: 16px; color: var(--text); }
+.article-body h3 { font-size: 1.15rem; margin-top: 30px; margin-bottom: 10px; color: var(--text); }
+.article-body p { color: var(--text-muted); margin: 0 0 16px; }
+.article-body ul, .article-body ol { color: var(--text-muted); padding-left: 22px; }
+.article-body li { margin-bottom: 8px; }
+.article-body strong { color: var(--text); }
+
+.disclosure-box {
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--gold);
+  border-radius: 10px;
+  padding: 18px 22px;
+  margin: 28px 0 40px;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.pick-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 24px 0 36px;
+  font-size: 0.92rem;
+}
+.pick-table th, .pick-table td {
+  text-align: left;
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--border);
+}
+.pick-table th { color: var(--text-muted); font-weight: 600; font-size: 0.82rem; }
+.pick-table td { color: var(--text); }
+.pick-table .buy {
+  display: inline-block;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--gold);
+  text-decoration: none;
+}
+
+@media (max-width: 640px) {
+  .hero { padding: 56px 0 40px; }
+  section { padding: 48px 0; }
+}
+
+
+/* -------- signup -------- */
+.signup-box {
+  margin-top: 28px;
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--gold);
+  border-radius: var(--radius);
+  padding: 28px 30px;
+  max-width: 560px;
+}
+.signup-copy h3 { font-size: 1.15rem; margin-bottom: 8px; }
+.signup-copy p { font-size: 0.92rem; margin: 0 0 18px; }
+.ml-embedded input[type="email"] {
+  background: var(--bg-panel-alt) !important;
+  border: 1px solid var(--border-strong) !important;
+  color: var(--text) !important;
+  border-radius: 10px !important;
+}
+.ml-embedded button, .ml-embedded input[type="submit"] {
+  background: linear-gradient(135deg, var(--pink), #ff6f9c) !important;
+  color: #14071A !important;
+  border-radius: 999px !important;
+  font-weight: 600 !important;
+  border: none !important;
+}
+
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <a class="logo" href="../index.html">PRELOAD<span class="dot">6</span></a>
+    <nav class="primary">
+      <a href="ps5-vs-xbox-gta6.html">Setup Guides</a>
+      <a href="../index.html#news">News</a>
+      <a href="../index.html#deals">Deals</a>
+      <a href="../about-disclosure.html">About</a>
+    </nav>
+  </div>
+</header>
+
+<div class="article-head">
+  <div class="wrap">
+    <div class="kicker">Setup Guide</div>
+    <h1>PS5 vs Xbox Series X|S for GTA VI: Which Should You Buy?</h1>
+    <div class="meta">Updated for the November 19, 2026 launch · 6 min read</div>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="article-body">
+
+    <p>
+      Grand Theft Auto VI launches day-and-date on PS5 and Xbox Series
+      X|S — there's no exclusive here. If you already own one, the
+      decision is made. But if you're buying a console specifically for
+      this game, the two platforms aren't identical, and the gap matters
+      more than most comparisons let on.
+    </p>
+
+    <div class="disclosure-box">
+      This guide contains affiliate links. We may earn a commission if
+      you buy through them, at no extra cost to you. Full details on our
+      <a href="../about-disclosure.html" style="color:var(--teal)">disclosure page</a>.
+    </div>
+
+    <h2>The short answer</h2>
+    <p>
+      If you're starting from zero and have no console preference, PS5
+      is the slightly safer default — Sony has positioned itself closely
+      with Rockstar around this launch, and the PS5 install base is
+      larger, which tends to mean better long-term matchmaking for GTA
+      Online. If you already have an Xbox ecosystem (Game Pass, friends,
+      a library), stick with Xbox — the gameplay experience itself is
+      built to be equivalent across both.
+    </p>
+
+    <h2>Where they actually differ</h2>
+    <h3>Storage</h3>
+    <p>
+      GTA VI is a large install. Both platforms let you expand storage,
+      but the process and cost differ — PS5 uses M.2 NVMe SSD expansion,
+      Xbox Series X uses a proprietary expansion card that costs more per
+      gigabyte. If storage is a concern, factor that into the price
+      comparison, not just the console itself.
+    </p>
+    <h3>Console pricing tiers</h3>
+    <p>
+      Both platforms offer a disc-drive and digital-only version at
+      different price points. Since GTA VI's physical edition ships with
+      a download code rather than a disc, the disc drive itself buys you
+      less than it used to — worth weighing if you're deciding between
+      tiers purely on price.
+    </p>
+    <h3>Subscription ecosystem</h3>
+    <p>
+      Xbox Game Pass includes a rotating library and, depending on tier,
+      day-one access to some first-party titles — GTA VI won't be part
+      of that, since it's a third-party release, but it's a factor if
+      you're weighing overall value. PlayStation Plus has its own tiers
+      with a different mix of benefits.
+    </p>
+
+    <h2>Our pick if you're starting from scratch</h2>
+    <table class="pick-table">
+      <thead>
+        <tr><th>Scenario</th><th>Recommendation</th><th></th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>No existing console, no strong preference</td>
+          <td>PS5 (disc edition if budget allows)</td>
+          <td><a class="buy" href="#">Check price →</a></td>
+        </tr>
+        <tr>
+          <td>Budget-focused, storage isn't a concern</td>
+          <td>PS5 Digital Edition</td>
+          <td><a class="buy" href="#">Check price →</a></td>
+        </tr>
+        <tr>
+          <td>Already have Xbox friends/library</td>
+          <td>Xbox Series X</td>
+          <td><a class="buy" href="#">Check price →</a></td>
+        </tr>
+        <tr>
+          <td>Tight budget, casual play</td>
+          <td>Xbox Series S</td>
+          <td><a class="buy" href="#">Check price →</a></td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="font-size:0.85rem">
+      Affiliate links will populate here once retailer programs are
+      approved — see the <a href="../about-disclosure.html" style="color:var(--teal)">rollout calendar</a> for timing.
+    </p>
+
+    <h2>What to buy alongside your console</h2>
+    <p>
+      Once you've picked a platform, the next decisions are storage and
+      audio — both covered in our
+      <a href="5-things-you-need-before-gta6.html" style="color:var(--teal)">5 things you need before launch</a>
+      checklist.
+    </p>
+
+    <div class="signup-box">
+      <div class="signup-copy">
+        <h3>Get deal alerts before launch</h3>
+        <p>One email when console or accessory prices actually move. No noise, no daily digest.</p>
+      </div>
+      <div class="ml-embedded" data-form="198850661890131858"></div>
+    </div>
+
+  </div>
+</div>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="cols">
+      <p class="disclosure">
+        PRELOAD 6 is an independent, unofficial buying guide and is not
+        affiliated with, endorsed by, or sponsored by Rockstar Games,
+        Take-Two Interactive, Sony, or Microsoft. Some links on this site
+        are affiliate links — see our <a href="../about-disclosure.html" style="color:var(--teal)">disclosure page</a>.
+      </p>
+      <nav>
+        <a href="ps5-vs-xbox-gta6.html">Setup Guides</a>
+        <a href="../about-disclosure.html">About</a>
+        <a href="../about-disclosure.html">Disclosure</a>
+      </nav>
+    </div>
+    <div class="copy">© 2026 PRELOAD 6. All product names and trademarks are property of their respective owners.</div>
+  </div>
+</footer>
+
+
+<script>
+    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+    ml('account', '2374933');
+</script>
+
+</body>
+</html>
