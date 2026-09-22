@@ -347,6 +347,51 @@ footer.site .copy { margin-top: 28px; color: var(--text-muted); font-size: 0.8re
 }
 .tracklist .artist { color: var(--text); font-weight: 600; }
 .tracklist .track { color: var(--text-muted); }
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22520%22%20height%3D%22520%22%20viewBox%3D%220%200%20520%20520%22%3E%0A%20%20%3Cg%20fill%3D%22none%22%20stroke%3D%22rgba%28255%2C255%2C255%2C0.05%29%22%20stroke-width%3D%221%22%3E%0A%20%20%20%20%3Cline%20x1%3D%220%22%20y1%3D%22420%22%20x2%3D%22520%22%20y2%3D%22420%22/%3E%0A%20%20%20%20%3Cline%20x1%3D%220%22%20y1%3D%22450%22%20x2%3D%22520%22%20y2%3D%22450%22/%3E%0A%20%20%20%20%3Cline%20x1%3D%220%22%20y1%3D%22480%22%20x2%3D%22520%22%20y2%3D%22480%22/%3E%0A%20%20%20%20%3Cline%20x1%3D%2260%22%20y1%3D%22420%22%20x2%3D%220%22%20y2%3D%22520%22/%3E%0A%20%20%20%20%3Cline%20x1%3D%22160%22%20y1%3D%22420%22%20x2%3D%22130%22%20y2%3D%22520%22/%3E%0A%20%20%20%20%3Cline%20x1%3D%22260%22%20y1%3D%22420%22%20x2%3D%22260%22%20y2%3D%22520%22/%3E%0A%20%20%20%20%3Cline%20x1%3D%22360%22%20y1%3D%22420%22%20x2%3D%22390%22%20y2%3D%22520%22/%3E%0A%20%20%20%20%3Cline%20x1%3D%22460%22%20y1%3D%22420%22%20x2%3D%22520%22%20y2%3D%22520%22/%3E%0A%20%20%3C/g%3E%0A%20%20%3Cg%20fill%3D%22rgba%2845%2C226%2C197%2C0.045%29%22%3E%0A%20%20%20%20%3Crect%20x%3D%2230%22%20y%3D%22330%22%20width%3D%2222%22%20height%3D%2290%22/%3E%0A%20%20%20%20%3Crect%20x%3D%2258%22%20y%3D%22300%22%20width%3D%2216%22%20height%3D%22120%22/%3E%0A%20%20%20%20%3Crect%20x%3D%22330%22%20y%3D%22350%22%20width%3D%2218%22%20height%3D%2270%22/%3E%0A%20%20%20%20%3Crect%20x%3D%22352%22%20y%3D%22310%22%20width%3D%2224%22%20height%3D%22110%22/%3E%0A%20%20%20%20%3Crect%20x%3D%22380%22%20y%3D%22360%22%20width%3D%2214%22%20height%3D%2260%22/%3E%0A%20%20%3C/g%3E%0A%20%20%3Cg%20fill%3D%22rgba%28255%2C62%2C127%2C0.05%29%22%3E%0A%20%20%20%20%3Cpath%20d%3D%22M120%20420%20C120%20380%20108%20360%20100%20345%20C112%20355%20122%20372%20124%20390%20C130%20372%20145%20358%20160%20352%20C148%20368%20140%20388%20138%20408%20C150%20396%20168%20388%20182%20388%20C166%20398%20150%20410%20142%20420%20Z%22/%3E%0A%20%20%3C/g%3E%0A%20%20%3Cg%20fill%3D%22rgba%28255%2C178%2C56%2C0.045%29%22%3E%0A%20%20%20%20%3Cpath%20d%3D%22M420%20430%20C420%20392%20409%20373%20401%20359%20C412%20368%20421%20384%20423%20400%20C428%20384%20442%20371%20456%20365%20C445%20380%20438%20398%20436%20416%20C447%20405%20463%20398%20476%20398%20C462%20408%20447%20419%20440%20430%20Z%22/%3E%0A%20%20%3C/g%3E%0A%20%20%3Ccircle%20cx%3D%22440%22%20cy%3D%2290%22%20r%3D%2246%22%20fill%3D%22rgba%28255%2C178%2C56%2C0.03%29%22/%3E%0A%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 420px 420px;
+  background-attachment: fixed;
+}
+
+/* -------- make link/product boxes stand out over the watermark -------- */
+.card {
+  box-shadow: 0 18px 40px -22px rgba(0,0,0,0.65);
+}
+.card:hover {
+  box-shadow: 0 22px 48px -20px rgba(255,62,127,0.28);
+}
+.pick-table {
+  background: var(--bg-panel-alt);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.pick-table th, .pick-table td { padding: 14px 18px; }
+.pick-table thead tr { background: rgba(255,255,255,0.03); }
+.pick-table .buy {
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(255,178,56,0.1);
+  border: 1px solid rgba(255,178,56,0.35);
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+.pick-table .buy:hover {
+  background: rgba(255,178,56,0.2);
+  transform: translateY(-1px);
+}
+.signup-box, .reserve-banner, .disclosure-box {
+  box-shadow: 0 20px 44px -26px rgba(0,0,0,0.7);
+}
+.news-row a {
+  transition: color 0.15s ease;
+}
 </style>
 </head>
 <body>
