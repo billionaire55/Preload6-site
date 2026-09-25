@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GTA VI Merch Leak: The "Goodtime State – Vice City Collection" — PRELOAD 6</title>
+<meta name="description" content="A September 24 datamine of Rockstar Store data reportedly surfaced 55+ unreleased GTA VI products, including a mysterious premium 'Goodtime State – Vice City Collection.' Here's what's confirmed and what isn't.">
+<meta property="og:title" content="GTA VI Merch Leak: The 'Goodtime State – Vice City Collection'">
+<meta property="og:description" content="55+ unreleased GTA VI products reportedly surfaced from Rockstar Store data, including a mysterious premium collection. What's confirmed and what isn't.">
+<meta property="og:type" content="article">
+<style>
+/* ===========================================================
+   PRELOAD — design tokens
+   Palette grounded in a Miami/Vice night: deep indigo sky,
+   sunset gold, and the pink/teal duotone of the coastline at dusk.
+   =========================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600;700;800&family=Manrope:wght@400;500;600;700&display=swap');
+
+:root {
+  --bg: #0E1225;
+  --bg-panel: #171B32;
+  --bg-panel-alt: #1D2242;
+  --text: #F5F3ED;
+  --text-muted: #9AA0B4;
+  --pink: #FF3E7F;
+  --teal: #2DE2C5;
+  --gold: #FFB238;
+  --border: rgba(245, 243, 237, 0.09);
+  --border-strong: rgba(245, 243, 237, 0.16);
+  --radius: 14px;
+  --max: 1120px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  background-image:
+    radial-gradient(ellipse 900px 500px at 15% -10%, rgba(255, 62, 127, 0.16), transparent 60%),
+    radial-gradient(ellipse 800px 500px at 100% 0%, rgba(45, 226, 197, 0.12), transparent 55%);
+  color: var(--text);
+  font-family: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, .display {
+  font-family: 'Unbounded', 'Manrope', sans-serif;
+  line-height: 1.12;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+h1 { font-weight: 700; }
+h2 { font-weight: 600; }
+h3 { font-weight: 600; }
+
+a { color: inherit; }
+
+p { color: var(--text-muted); max-width: 62ch; }
+
+.wrap {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* -------- header -------- */
+header.site {
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  background: rgba(14, 18, 37, 0.85);
+  backdrop-filter: blur(10px);
+  z-index: 10;
+}
+
+header.site .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+}
+
+.logo {
+  font-family: 'Unbounded', sans-serif;
+  font-weight: 700;
+  font-size: 1.15rem;
+  text-decoration: none;
+  color: var(--text);
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+.logo .dot { color: var(--pink); }
+
+nav.primary { display: flex; gap: 28px; }
+nav.primary a {
+  text-decoration: none;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.15s ease;
+}
+nav.primary a:hover, nav.primary a:focus-visible { color: var(--text); }
+
+/* -------- buttons -------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 22px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border: 1px solid transparent;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.btn:focus-visible { outline: 2px solid var(--teal); outline-offset: 2px; }
+.btn-primary {
+  background: linear-gradient(135deg, var(--pink), #ff6f9c);
+  color: #14071A;
+}
+.btn-primary:hover { transform: translateY(-1px); box-shadow: 0 8px 24px -8px rgba(255, 62, 127, 0.55); }
+.btn-ghost {
+  background: transparent;
+  border-color: var(--border-strong);
+  color: var(--text);
+}
+.btn-ghost:hover { border-color: var(--teal); color: var(--teal); }
+
+/* -------- sections -------- */
+section { padding: 72px 0; }
+section.tinted { background: var(--bg-panel); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+
+/* -------- footer -------- */
+footer.site {
+  border-top: 1px solid var(--border);
+  padding: 48px 0 64px;
+}
+footer.site .cols {
+  display: flex;
+  justify-content: space-between;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+footer.site .disclosure {
+  max-width: 60ch;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+footer.site nav { display: flex; gap: 22px; flex-wrap: wrap; }
+footer.site nav a { text-decoration: none; color: var(--text-muted); font-size: 0.9rem; }
+footer.site nav a:hover { color: var(--text); }
+footer.site .copy { margin-top: 28px; color: var(--text-muted); font-size: 0.8rem; }
+
+/* -------- article -------- */
+.article-head { padding: 64px 0 40px; border-bottom: 1px solid var(--border); }
+.article-head .kicker { color: var(--teal); font-weight: 600; margin-bottom: 16px; }
+.article-head h1 { font-size: clamp(2rem, 4.5vw, 3rem); max-width: 24ch; }
+.article-head .meta { margin-top: 20px; color: var(--text-muted); font-size: 0.9rem; }
+
+.article-body { padding: 48px 0; max-width: 72ch; }
+.article-body h2 { font-size: 1.5rem; margin-top: 44px; margin-bottom: 16px; color: var(--text); }
+.article-body h3 { font-size: 1.15rem; margin-top: 30px; margin-bottom: 10px; color: var(--text); }
+.article-body p { color: var(--text-muted); margin: 0 0 16px; }
+.article-body ul, .article-body ol { color: var(--text-muted); padding-left: 22px; }
+.article-body li { margin-bottom: 8px; }
+.article-body strong { color: var(--text); }
+
+.disclosure-box {
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--gold);
+  border-radius: 10px;
+  padding: 18px 22px;
+  margin: 28px 0 40px;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.status-box {
+  background: var(--bg-panel-alt);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+  padding: 22px 24px;
+  margin: 28px 0 36px;
+  box-shadow: 0 18px 40px -22px rgba(0,0,0,0.65);
+}
+.status-box h3 { font-size: 1rem; margin-bottom: 14px; }
+.status-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.92rem;
+}
+.status-row:last-child { border-bottom: none; }
+.status-row .label { color: var(--text-muted); }
+.status-row .val { color: var(--text); font-weight: 600; text-align: right; }
+.status-row .val.unconfirmed { color: var(--gold); }
+
+@media (max-width: 640px) {
+  section { padding: 48px 0; }
+}
+
+/* -------- signup -------- */
+.signup-box {
+  margin-top: 28px;
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--gold);
+  border-radius: var(--radius);
+  padding: 28px 30px;
+  max-width: 560px;
+  box-shadow: 0 20px 44px -26px rgba(0,0,0,0.7);
+}
+.signup-copy h3 { font-size: 1.15rem; margin-bottom: 8px; }
+.signup-copy p { font-size: 0.92rem; margin: 0 0 18px; }
+.ml-embedded input[type="email"] {
+  background: var(--bg-panel-alt) !important;
+  border: 1px solid var(--border-strong) !important;
+  color: var(--text) !important;
+  border-radius: 10px !important;
+}
+.ml-embedded button, .ml-embedded input[type="submit"] {
+  background: linear-gradient(135deg, var(--pink), #ff6f9c) !important;
+  color: #14071A !important;
+  border-radius: 999px !important;
+  font-weight: 600 !important;
+  border: none !important;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22520%22%20height%3D%22520%22%20viewBox%3D%220%200%20520%20520%22%3E%0A%20%20%3Cg%20fill%3D%22none%22%20stroke%3D%22rgba%28255%2C255%2C255%2C0.05%29%22%20stroke-width%3D%221%22%3E%0A%20%20%20%20%3Cline%20x1%3D%220%22%20y1%3D%22420%22%20x2%3D%22520%22%20y2%3D%22420%22/%3E%0A%20%20%20%20%3Cline%20x1%3D%220%22%20y1%3D%22450%22%20x2%3D%22520%22%20y2%3D%22450%22/%3E%0A%20%20%20%20%3Cline%20x1%3D%220%22%20y1%3D%22480%22%20x2%3D%22520%22%20y2%3D%22480%22/%3E%0A%20%20%20%20%3Cline%20x1%3D%2260%22%20y1%3D%22420%22%20x2%3D%220%22%20y2%3D%22520%22/%3E%0A%20%20%20%20%3Cline%20x1%3D%22160%22%20y1%3D%22420%22%20x2%3D%22130%22%20y2%3D%22520%22/%3E%0A%20%20%20%20%3Cline%20x1%3D%22260%22%20y1%3D%22420%22%20x2%3D%22260%22%20y2%3D%22520%22/%3E%0A%20%20%20%20%3Cline%20x1%3D%22360%22%20y1%3D%22420%22%20x2%3D%22390%22%20y2%3D%22520%22/%3E%0A%20%20%20%20%3Cline%20x1%3D%22460%22%20y1%3D%22420%22%20x2%3D%22520%22%20y2%3D%22520%22/%3E%0A%20%20%3C/g%3E%0A%20%20%3Cg%20fill%3D%22rgba%2845%2C226%2C197%2C0.045%29%22%3E%0A%20%20%20%20%3Crect%20x%3D%2230%22%20y%3D%22330%22%20width%3D%2222%22%20height%3D%2290%22/%3E%0A%20%20%20%20%3Crect%20x%3D%2258%22%20y%3D%22300%22%20width%3D%2216%22%20height%3D%22120%22/%3E%0A%20%20%20%20%3Crect%20x%3D%22330%22%20y%3D%22350%22%20width%3D%2218%22%20height%3D%2270%22/%3E%0A%20%20%20%20%3Crect%20x%3D%22352%22%20y%3D%22310%22%20width%3D%2224%22%20height%3D%22110%22/%3E%0A%20%20%20%20%3Crect%20x%3D%22380%22%20y%3D%22360%22%20width%3D%2214%22%20height%3D%2260%22/%3E%0A%20%20%3C/g%3E%0A%20%20%3Cg%20fill%3D%22rgba%28255%2C62%2C127%2C0.05%29%22%3E%0A%20%20%20%20%3Cpath%20d%3D%22M120%20420%20C120%20380%20108%20360%20100%20345%20C112%20355%20122%20372%20124%20390%20C130%20372%20145%20358%20160%20352%20C148%20368%20140%20388%20138%20408%20C150%20396%20168%20388%20182%20388%20C166%20398%20150%20410%20142%20420%20Z%22/%3E%0A%20%20%3C/g%3E%0A%20%20%3Cg%20fill%3D%22rgba%28255%2C178%2C56%2C0.045%29%22%3E%0A%20%20%20%20%3Cpath%20d%3D%22M420%20430%20C420%20392%20409%20373%20401%20359%20C412%20368%20421%20384%20423%20400%20C428%20384%20442%20371%20456%20365%20C445%20380%20438%20398%20436%20416%20C447%20405%20463%20398%20476%20398%20C462%20408%20447%20419%20440%20430%20Z%22/%3E%0A%20%20%3C/g%3E%0A%20%20%3Ccircle%20cx%3D%22440%22%20cy%3D%2290%22%20r%3D%2246%22%20fill%3D%22rgba%28255%2C178%2C56%2C0.03%29%22/%3E%0A%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 420px 420px;
+  background-attachment: fixed;
+}
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <a class="logo" href="../index.html">PRELOAD<span class="dot">6</span></a>
+    <nav class="primary">
+      <a href="../setup-guides/ps5-vs-xbox-gta6.html">Setup Guides</a>
+      <a href="../index.html#news">News</a>
+      <a href="../index.html#deals">Deals</a>
+      <a href="../about-disclosure.html">About</a>
+    </nav>
+  </div>
+</header>
+
+<div class="article-head">
+  <div class="wrap">
+    <div class="kicker">News · Merchandise</div>
+    <h1>GTA VI Merch Leak: The "Goodtime State – Vice City Collection"</h1>
+    <div class="meta">Published September 24, 2026 · 5 min read</div>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="article-body">
+
+    <p>
+      A September 24 datamine of Rockstar Store backend data reportedly
+      surfaced more than 55 unreleased GTA VI products — and one listing
+      in particular has the internet talking: a premium package called
+      <strong>"Grand Theft Auto VI: The Goodtime State – Vice City
+      Collection."</strong> Here's exactly what's confirmed, what isn't,
+      and why it matters even before Rockstar says a word.
+    </p>
+
+    <div class="disclosure-box">
+      This is a leak, not an announcement. We're flagging what's been
+      reported and being upfront about what Rockstar has and hasn't
+      confirmed. This page contains no affiliate links, because none of
+      this merchandise is available to buy yet.
+    </div>
+
+    <div class="status-box">
+      <h3>What's confirmed vs. unconfirmed</h3>
+      <div class="status-row"><span class="label">Datamine occurred (55+ products found in store data)</span><span class="val">Reported</span></div>
+      <div class="status-row"><span class="label">"Vice City Collection" is Rockstar's Collector's Edition</span><span class="val unconfirmed">Speculation</span></div>
+      <div class="status-row"><span class="label">Pricing for any leaked item</span><span class="val unconfirmed">Not available</span></div>
+      <div class="status-row"><span class="label">Rockstar has officially announced the collection</span><span class="val unconfirmed">No</span></div>
+      <div class="status-row"><span class="label">GTA VI game, Nov 19 launch</span><span class="val">Confirmed, unaffected</span></div>
+    </div>
+
+    <h2>What was reportedly found</h2>
+    <p>
+      According to reporting on the datamine, the leaked product list
+      includes a wide range of everyday merchandise — GTA VI hats,
+      apparel, sticker packs, bags, a basketball, and a Burger
+      Shot–branded lunch bag, among other items. Most of this reads like
+      standard franchise merch you'd expect ahead of any major launch.
+    </p>
+    <p>
+      The item generating the most attention is the "Goodtime State –
+      Vice City Collection" listing itself. Reporting describes it as
+      classified as a physical good, limited to one per customer, and
+      flagged with a notably heavy package weight — details that have
+      fueled speculation it could be a Collector's Edition bundle.
+      Rockstar has not confirmed that interpretation, or the product at
+      all.
+    </p>
+
+    <h2>Why we're treating this carefully</h2>
+    <p>
+      Datamines and leaked store data are often accurate about a
+      product's existence but unreliable about pricing, contents, and
+      release timing — retailers and publishers stage unannounced SKUs
+      in backend systems for all kinds of reasons, and plans change
+      before launch. Until Rockstar posts it on the official store or
+      announces it directly, we're treating the Vice City Collection as
+      <strong>credible but unconfirmed</strong>, not a real product you
+      can plan a purchase around.
+    </p>
+
+    <h2>Why it's still worth watching</h2>
+    <p>
+      Confirmed or not, this fits a pattern that's been building for
+      months: GTA VI is being monetized well beyond the $79.99 game
+      itself — a $99.99 Ultimate upgrade, the official 34-song album
+      across streaming, CD, and vinyl, licensed controllers and cases,
+      and now apparently a wave of apparel and collectibles. If a
+      genuine premium collector's item is coming, it's a real signal of
+      how far Rockstar and Take-Two are willing to extend the franchise
+      around launch — not just at launch.
+    </p>
+
+    <h2>What we'll do when it's official</h2>
+    <ul>
+      <li><strong>We won't link anything until it's real.</strong> No affiliate links go up until Rockstar posts an actual product page.</li>
+      <li><strong>We'll flag likely sellout risk early.</strong> A limited, one-per-customer collector's item is exactly the kind of listing that disappears fast.</li>
+      <li><strong>We'll update this page</strong> rather than bury the news in a new post, so this stays the one place to check.</li>
+    </ul>
+
+    <div class="signup-box">
+      <div class="signup-copy">
+        <h3>Get notified the moment this goes official</h3>
+        <p>One email if/when Rockstar confirms the Vice City Collection or opens preorders — not a daily digest.</p>
+      </div>
+      <div class="ml-embedded" data-form="198850661890131858"></div>
+    </div>
+
+    <h2>Next step</h2>
+    <p>
+      Already decided on hardware? Check
+      <a href="../setup-guides/ps5-vs-xbox-gta6.html" style="color:var(--teal)">PS5 vs Xbox Series X|S for GTA VI</a>
+      or catch up on
+      <a href="gta-6-album-soundtrack.html" style="color:var(--teal)">the official GTA VI album</a>.
+    </p>
+
+  </div>
+</div>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="cols">
+      <p class="disclosure">
+        PRELOAD 6 is an independent, unofficial buying guide and is not
+        affiliated with, endorsed by, or sponsored by Rockstar Games,
+        Take-Two Interactive, Sony, or Microsoft. Some links on this site
+        are affiliate links — see our
+        <a href="../about-disclosure.html" style="color:var(--teal)">disclosure page</a>.
+      </p>
+      <nav>
+        <a href="../setup-guides/ps5-vs-xbox-gta6.html">Setup Guides</a>
+        <a href="../about-disclosure.html">About</a>
+        <a href="../about-disclosure.html">Disclosure</a>
+      </nav>
+    </div>
+    <div class="copy">© 2026 PRELOAD 6. All product names and trademarks are property of their respective owners.</div>
+  </div>
+</footer>
+
+<script>
+    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+    ml('account', '2374933');
+</script>
+
+</body>
+</html>
