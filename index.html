@@ -341,6 +341,51 @@ footer.site .copy { margin-top: 28px; color: var(--text-muted); font-size: 0.8re
   margin-top: -8px;
 }
 
+.deal-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+  background: linear-gradient(135deg, rgba(45,226,197,0.14), rgba(45,226,197,0.04));
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--teal);
+  border-radius: var(--radius);
+  padding: 26px 30px;
+  margin: 28px 0;
+  box-shadow: 0 20px 44px -26px rgba(0,0,0,0.7);
+}
+.deal-banner .deal-copy .tag {
+  color: var(--teal);
+  font-weight: 700;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 6px;
+}
+.deal-banner .deal-copy h3 { font-size: 1.25rem; margin-bottom: 6px; }
+.deal-banner .deal-copy p { font-size: 0.92rem; margin: 0; max-width: 46ch; }
+
+.walmart-creative-wrap {
+  max-width: 220px;
+  margin: 18px 0 28px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--border-strong);
+  box-shadow: 0 20px 44px -26px rgba(0,0,0,0.7);
+}
+.walmart-creative-wrap img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.walmart-creative-wrap .cap {
+  display: block;
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  margin-top: 8px;
+}
+
 @media (max-width: 640px) {
   .hero { padding: 56px 0 40px; }
   section { padding: 48px 0; }
@@ -494,10 +539,15 @@ body::before {
         <h3>5 Things You Need Before Launch</h3>
         <p>Storage, subscriptions, and the small stuff people forget until download day. A short list, checked twice.</p>
       </a>
-      <a class="card" href="about-disclosure.html">
-        <div class="tag">Coming soon</div>
+      <a class="card" href="setup-guides/best-storage-gta6.html">
+        <div class="tag">Storage</div>
         <h3>Best Storage Options for GTA VI</h3>
-        <p>How much space you actually need, and the external drives worth buying if your console is already tight.</p>
+        <p>How much space you actually need, and the PS5/Xbox expansion drives worth buying if your console is already tight.</p>
+      </a>
+      <a class="card" href="setup-guides/best-tv-monitor-gta6.html">
+        <div class="tag">Display</div>
+        <h3>Best TV & Monitor for GTA VI</h3>
+        <p>HDMI 2.1, VRR, and 120Hz explained — plus a TV pick and a monitor pick depending on your setup.</p>
       </a>
     </div>
   </div>
@@ -544,10 +594,28 @@ body::before {
     <div class="section-head">
       <h2>Deal tracker</h2>
     </div>
+    <div class="deal-banner">
+      <div class="deal-copy">
+        <div class="tag">Walmart · Limited-time</div>
+        <h3>Rollback deals — up to 40% off</h3>
+        <p>Consoles, storage, and gaming gear discounted right now at Walmart. Stock and pricing change fast.</p>
+      </div>
+      <a class="btn btn-primary" href="https://goto.walmart.com/c/56361/1157584/9383?sourceid=imp_000011112222333344&u=https%3A%2F%2Fwww.walmart.com%2Fbrowse%2Fdeals%2F0%2F0%3F_refineresult%3Dtrue&veh=aff&facet=shelf_id%3A6890999&search_sort=100&_be_shelf_id=6890999" target="_blank" rel="noopener sponsored">Shop Walmart deals →</a>
+    </div>
+
+    <div class="walmart-creative-wrap">
+      <a rel="sponsored" href="https://goto.walmart.com/c/56361/1157584/9383?sourceid=imp_000011112222333344&u=https%3A%2F%2Fwww.walmart.com%2Fbrowse%2Fdeals%2F0%2F0%3F_refineresult%3Dtrue&veh=aff&facet=shelf_id%3A6890999&search_sort=100&_be_shelf_id=6890999" target="_blank" id="1157584">
+        <img src="https://a.impactradius-go.com/display-ad/9383-1157584" alt="Walmart — up to 40% off, shop now" width="300" height="600" loading="lazy">
+      </a>
+      <span class="cap">Advertisement</span>
+    </div>
+    <img height="0" width="0" src="https://imp.pxf.io/i/56361/1157584/9383" style="position:absolute;visibility:hidden;" alt="" />
+
     <p style="max-width:60ch">
-      Live pricing on consoles, storage, and accessories goes here once the
-      first affiliate program is live — timed to build through October and
-      peak around Black Friday. Get notified the moment something drops.
+      More live pricing on consoles, storage, and accessories goes here as
+      additional affiliate programs go live — timed to build through
+      October and peak around Black Friday. Get notified the moment
+      something drops.
     </p>
     <div class="signup-box">
       <div class="signup-copy">
